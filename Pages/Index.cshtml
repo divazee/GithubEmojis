@@ -1,11 +1,27 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    //ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h1>Github Emoji</h1>
+
+<div class="allEmojis">
+    @foreach (var em in Model.Emojis)
+    {
+        <div class="emoji">
+            <img src="@em.Url" alt="Emoji - @em.Key" height="128" width="128" />
+            <code>@em.Key</code>
+        </div>
+    }
+
 </div>
+
+
+
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">zee baby of lif Web apps with ASP.NET Core</a>.</p>
+    </div>*@
 
